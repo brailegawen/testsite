@@ -596,7 +596,7 @@
         const navbarItemOne = document.querySelector(".nav-link-1");
         const navbarItemTwo = document.querySelector(".nav-link-2");
         const navbarItemThree = document.querySelector(".nav-link-3");
-        console.log({ navbarHeight });
+
         // header section
         const header = document.querySelector(".header-video-container");
 
@@ -672,14 +672,10 @@
         const aboutUsYoffsetStart = aboutUs.getBoundingClientRect().top;
         const featuresYoffsetStart = features.getBoundingClientRect().top;
         const contactUsYoffsetStart = contactUs.getBoundingClientRect().top;
-        console.log({ aboutUsYoffsetStart });
-        console.log({ featuresYoffsetStart });
-        console.log({ contactUsYoffsetStart });
 
         /* start of scroll listener and events */
         window.addEventListener("scroll", function (e) {
           const yOffset = window.pageYOffset + navbarHeight;
-          console.log({ yOffset });
 
           /* change navbar background using the .navbarDark class and underline on scroll */
           if (yOffset > 0.5 * aboutUsYoffsetStart) {
