@@ -103,7 +103,7 @@
     <!-- END NAVBAR -->
 
     <!-- HEADER -->
-    <header class="relative overflow-hidden">
+    <header class="relative overflow-hidden h-screen">
       <div class="relative header-video-container overflow-hidden">
         <video class="max-w-fit max-h-screen 2xl:max-h-fit" autoplay loop muted>
           <source src="./assets/hero-blurry.mp4" type="video/mp4" />
@@ -175,7 +175,6 @@
 
           <div
             data-aos="zoom-in-up"
-            data-aos-duration="1000"
             data-aos-anchor-placement="top-center"
             class="
               about-text
@@ -227,7 +226,6 @@
         <div class="features-wrap w-screen max-w-fit overflow-x-hidden">
           <div
             data-aos="fade-right"
-            data-aos-duration="1000"
             data-aos-anchor-placement="top-center"
             class="
               single-feature
@@ -291,7 +289,6 @@
           </div>
           <div
             data-aos="fade-left"
-            data-aos-duration="1000"
             data-aos-anchor-placement="top-center"
             class="
               single-feature
@@ -354,7 +351,6 @@
           </div>
           <div
             data-aos="fade-right"
-            data-aos-duration="1000"
             data-aos-anchor-placement="top-center"
             class="
               single-feature
@@ -419,7 +415,6 @@
 
           <div
             data-aos="fade-left"
-            data-aos-duration="1000"
             data-aos-anchor-placement="top-center"
             class="
               single-feature
@@ -576,12 +571,11 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-      /* initialize animate on scroll library */
-      AOS.init();
-
       //   make sure to load all resources first before firing anything
       window.addEventListener("load", (event) => {
-        /* make sure page start on top when reloaded */
+        /* initialize animate on scroll library */
+        AOS.init();
+        /* make sure page starts on top when reloaded */
         if (history.scrollRestoration) {
           history.scrollRestoration = "manual";
         } else {
@@ -602,7 +596,7 @@
         const navbarItemOne = document.querySelector(".nav-link-1");
         const navbarItemTwo = document.querySelector(".nav-link-2");
         const navbarItemThree = document.querySelector(".nav-link-3");
-
+        console.log({ navbarHeight });
         // header section
         const header = document.querySelector(".header-video-container");
 
@@ -644,11 +638,6 @@
           });
         };
 
-        //   starting points of each section based on their YOffset
-        const aboutUsYoffsetStart = aboutUs.getBoundingClientRect().top;
-        const featuresYoffsetStart = features.getBoundingClientRect().top;
-        const contactUsYoffsetStart = contactUs.getBoundingClientRect().top;
-
         /* scroll to top btn */
         const scrollToTopBtn = document.querySelector(".top-top-btn");
         scrollToTopBtn.addEventListener("click", (event) => {
@@ -679,10 +668,17 @@
           });
         });
 
+        //   starting points of each section based on their YOffset
+        const aboutUsYoffsetStart = aboutUs.getBoundingClientRect().top;
+        const featuresYoffsetStart = features.getBoundingClientRect().top;
+        const contactUsYoffsetStart = contactUs.getBoundingClientRect().top;
+        console.log({ aboutUsYoffsetStart });
+        console.log({ featuresYoffsetStart });
+        console.log({ contactUsYoffsetStart });
+
         /* start of scroll listener and events */
         window.addEventListener("scroll", function (e) {
           const yOffset = window.pageYOffset + navbarHeight;
-
           console.log({ yOffset });
 
           /* change navbar background using the .navbarDark class and underline on scroll */
