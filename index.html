@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Morivy</title>
+    <link href="./css/output.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- To Top Button -->
+    <div class="fixed bottom-4 right-4 cursor-pointer top-top-btn z-50 hidden">
+      <img src="./assets/top.png" alt="" />
+    </div>
+    <!-- END To Top Button -->
+    <!-- NAVBAR -->
+    <nav
+      class="
+        navbar
+        fixed
+        z-10
+        w-full
+        h-12
+        lg:h-20
+        bg-white
+        opacity-75
+        backdrop-blur-xl
+        transition-all
+        duration-1000
+        ease-in-out
+      "
+    >
+      <ul class="flex justify-evenly items-center h-full lg:justify-between">
+        <li class="w-24 lg:ml-6 relative">
+          <image src="./assets/Morivy-logo-with-text.svg" alt="logo" />
+        </li>
+        <li class="w-1/2 h-full hidden lg:flex">
+          <ul
+            class="
+              flex
+              justify-evenly
+              items-center
+              w-full
+              h-full
+              navbar-list
+              navtext
+            "
+          >
+            <li class="h-full flex items-center nav-link-1 link-class">
+              <a data-section="about-us-section" class="" href="#"
+                >Who We Are</a
+              >
+            </li>
+            <li class="h-full flex items-center nav-link-2 link-class">
+              <a data-section="features-section" class="" href="#">
+                What We Do</a
+              >
+            </li>
+            <li class="h-full flex items-center nav-link-3 link-class">
+              <a data-section="contact-us-section" class="" href="#">
+                Get In Touch</a
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- mobile navbar -->
+
+    <div class="h-16 w-12 absolute top-6 right-4 lg:hidden">
+      <input class="burger-input-trigger" type="checkbox" id="navi-burger" />
+      <label class="burger-menu-line-container" for="navi-burger">
+        <span class="burger-line relative mt-4 bg-skin-primary"></span>
+      </label>
+      <div class="burger-page-background">&nbsp</div>
+      <div class="burger-menu">
+        <ul class="burger-list-menu">
+          <li class="burger-link-1 link-class">
+            <a
+              type="button"
+              data-section="about-us-section"
+              class="burger-link"
+              href="#"
+              >Who We Are</a
+            >
+          </li>
+          <li class="burger-link-2 link-class">
+            <a data-section="features-section" class="burger-link" href="#">
+              What We Do</a
+            >
+          </li>
+          <li class="burger-link-3 link-class">
+            <a data-section="contact-us-section" class="burger-link" href="#">
+              Get In Touch</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- END NAVBAR -->
+
+    <!-- HEADER -->
+    <header class="relative overflow-hidden">
+      <div class="relative header-video-container overflow-hidden">
+        <video class="max-w-fit max-h-screen 2xl:max-h-fit" autoplay loop muted>
+          <source src="./assets/hero-blurry.mp4" type="video/mp4" />
+        </video>
+      </div>
+
+      <div
+        class="
+          absolute
+          top-[40%]
+          lg:top-[30%]
+          left-2/4
+          -translate-x-1/2
+          translate-y-1/2
+          w-full
+        "
+      >
+        <div
+          class="
+            flex
+            justify-center
+            items-center
+            text-2xl
+            font-normal
+            lg:font-extralight
+            sm:text-4xl
+            lg:text-5xl
+            xl:text-6xl
+          "
+        >
+          <span class="text-skin-tertiary">< </span>
+          <span class="text-white">Turning Ideas Into Reality</span>
+          <span class="text-skin-tertiary"> /></span>
+        </div>
+      </div>
+    </header>
+    <!-- END HEADER -->
+
+    <main>
+      <!-- about use section -->
+      <section class="about-us-section max-h-screen">
+        <div
+          class="
+            relative
+            about-us-top
+            bg-skin-primary-dark
+            h-[75vh]
+            overflow-hidden
+            w-full
+          "
+        >
+          <img
+            data-aos="slide-right"
+            data-aos-duration="2000"
+            data-aos-anchor-placement="top-center"
+            class="absolute logo-left max-w-fit w-min h-screen top-0 left-0"
+            src="./assets/moviry-logo2@1x.png"
+            alt=""
+          />
+
+          <img
+            data-aos="slide-left"
+            data-aos-duration="2000"
+            data-aos-anchor-placement="top-center"
+            class="absolute logo-right max-w-fit h-screen top-0 right-0"
+            src="./assets/moviry-logo2-1@1x.png"
+            alt=""
+          />
+
+          <div
+            data-aos="zoom-in-up"
+            data-aos-duration="1000"
+            data-aos-anchor-placement="top-center"
+            class="
+              about-text
+              w-full
+              h-full
+              flex flex-col
+              justify-center
+              items-center
+              text-center
+            "
+          >
+            <div class="section-title">
+              <p class="text-4xl lg:text-6xl text-skin-secondary pb-4 md:pb-8">
+                Who We Are
+              </p>
+            </div>
+            <div
+              class="
+                about-us-desc
+                font-light
+                text-skin-tertiary
+                w-9/12
+                md:w-6/12
+                lg:w-5/12
+                text-xl
+                md:text-2xl
+                lg:text-4xl
+              "
+            >
+              We create brand-building platforms that are both creative and
+              cost-effective. We specialize in both website and mobile
+              application design development, big data solutions and other
+              product development.
+            </div>
+          </div>
+        </div>
+        <div
+          class="
+            about-us-extended-img
+            bg-[url('./assets/code.jpg')] bg-center bg-cover bg-fixed
+            h-[25vh]
+          "
+        ></div>
+      </section>
+      <!-- END about use section -->
+
+      <!-- features section -->
+      <section class="features-section bg-skin-tertiary-light">
+        <div class="features-wrap w-screen max-w-fit overflow-x-hidden">
+          <div
+            data-aos="fade-right"
+            data-aos-duration="1000"
+            data-aos-anchor-placement="top-center"
+            class="
+              single-feature
+              relative
+              flex flex-col
+              min-h-screen
+              p-10
+              md:px-32 md:pt-32 md:pb-0 md:h-2/4 md:min-h-0 md:flex-row
+            "
+          >
+            <h2
+              class="
+                text-skin-primary-dark text-5xl
+                font-bold
+                text-center
+                md:hidden
+              "
+            >
+              Discover
+            </h2>
+            <div class="image flex justify-center md:w-full">
+              <img
+                src="./assets/feature1.png"
+                alt=""
+                class="max-w-full md:max-w-fit md:h-fit md:max-h-fit"
+              />
+            </div>
+            <div class="feature-text mt-6 md:pl-10">
+              <h2
+                class="
+                  text-skin-primary-dark text-5xl
+                  font-bold
+                  text-center
+                  hidden
+                  md:block md:text-left md:mb-6
+                "
+              >
+                Discover
+              </h2>
+              <h3 class="font-black text-3xl text-center mb-6 md:text-left">
+                Discover what's important the most.
+              </h3>
+              <p
+                class="
+                  text-skin-primary-dark text-xl
+                  font-normal
+                  text-center
+                  md:text-left
+                "
+              >
+                Identifying what's really important is the first step in
+                creating excellent digital platforms. We begin by asking
+                questions such as “Who is your target market?” and “How long
+                have you been in business?" "How will the platform strengthen
+                your present brand positioning?" and "How will the platform
+                strengthen your current brand positioning?" We collaborate with
+                you to create a platform that has a measurable influence on your
+                overall marketing goals.
+              </p>
+            </div>
+          </div>
+          <div
+            data-aos="fade-left"
+            data-aos-duration="1000"
+            data-aos-anchor-placement="top-center"
+            class="
+              single-feature
+              relative
+              flex flex-col
+              min-h-screen
+              p-10
+              md:px-32 md:pt-32 md:pb-0 md:h-2/4 md:min-h-0 md:flex-row
+            "
+          >
+            <h2
+              class="
+                text-skin-primary-dark text-5xl
+                font-bold
+                text-center
+                md:hidden
+              "
+            >
+              Design
+            </h2>
+            <div class="image flex justify-center md:w-full md:order-last">
+              <img
+                src="./assets/feature1.png"
+                alt=""
+                class="max-w-full md:max-w-fit md:h-fit md:max-h-fit"
+              />
+            </div>
+            <div class="feature-text mt-6 md:pr-10">
+              <h2
+                class="
+                  text-skin-primary-dark text-5xl
+                  font-bold
+                  text-center
+                  hidden
+                  md:block md:text-right md:mb-6
+                "
+              >
+                Design
+              </h2>
+              <h3 class="font-black text-3xl text-center mb-6 md:text-right">
+                Design that isn't merely pleasing to the eye.
+              </h3>
+              <p
+                class="
+                  text-skin-primary-dark text-xl
+                  font-normal
+                  text-center
+                  md:text-right
+                "
+              >
+                We don't make platforms just to look good because we're result-
+                driven and goal-oriented. Instead, we collaborate with you to
+                minimize the clutter and highlight whatpeople love about your
+                brand in the first place. The end result is a platform that not
+                only looks great and works flawlessly, but also sends the
+                appropriate message to the right people and produces the desired
+                outcome.
+              </p>
+            </div>
+          </div>
+          <div
+            data-aos="fade-right"
+            data-aos-duration="1000"
+            data-aos-anchor-placement="top-center"
+            class="
+              single-feature
+              relative
+              flex flex-col
+              min-h-screen
+              p-10
+              md:px-32 md:pt-32 md:pb-0 md:h-2/4 md:min-h-0 md:flex-row
+            "
+          >
+            <h2
+              class="
+                text-skin-primary-dark text-5xl
+                font-bold
+                text-center
+                md:hidden
+              "
+            >
+              Develop
+            </h2>
+            <div class="image flex justify-center md:w-full">
+              <img
+                src="./assets/feature1.png"
+                alt=""
+                class="max-w-full md:max-w-fit md:h-fit md:max-h-fit"
+              />
+            </div>
+            <div class="feature-text mt-6 md:pl-10">
+              <h2
+                class="
+                  text-skin-primary-dark text-5xl
+                  font-bold
+                  text-center
+                  hidden
+                  md:block md:text-left md:mb-6
+                "
+              >
+                Develop
+              </h2>
+              <h3 class="font-black text-3xl text-center mb-6 md:text-left">
+                Develop to your full potential
+              </h3>
+              <p
+                class="
+                  text-skin-primary-dark text-xl
+                  font-normal
+                  text-center
+                  md:text-left
+                "
+              >
+                Our primary strength is our ability to efficiently use the most
+                up- to-date technologies to create digital platforms that
+                achieve any goal or purpose. This empowers our clients to push
+                the boundaries of their ideas, knowing that whatever their
+                imagination conjures up, we can execute. Your wish is our
+                command, and we are the genie in your jar. It's not for nothing
+                that our motto is “build a better future by turning ideas into
+                reality.”
+              </p>
+            </div>
+          </div>
+
+          <div
+            data-aos="fade-left"
+            data-aos-duration="1000"
+            data-aos-anchor-placement="top-center"
+            class="
+              single-feature
+              relative
+              flex flex-col
+              min-h-screen
+              p-10
+              md:px-32 md:pt-32 md:pb-0 md:h-2/4 md:min-h-0 md:flex-row
+            "
+          >
+            <h2
+              class="
+                text-skin-primary-dark text-5xl
+                font-bold
+                text-center
+                md:hidden
+              "
+            >
+              Deploy
+            </h2>
+            <div class="image flex justify-center md:w-full md:order-last">
+              <img
+                src="./assets/feature1.png"
+                alt=""
+                class="max-w-full md:max-w-fit md:h-fit md:max-h-fit"
+              />
+            </div>
+
+            <div class="feature-text mt-6 md:pr-10">
+              <h2
+                class="
+                  text-skin-primary-dark text-5xl
+                  font-bold
+                  text-center
+                  hidden
+                  md:block md:text-right md:mb-6
+                "
+              >
+                Deploy
+              </h2>
+              <h3 class="font-black text-3xl text-center mb-6 md:text-right">
+                Deploy in a secure and cost-effective manner.
+              </h3>
+              <p
+                class="
+                  text-skin-primary-dark text-xl
+                  font-normal
+                  text-center
+                  md:text-right
+                "
+              >
+                Potent, protected, and cost-effective are all characteristics
+                that come to mind when describing your platform's new home. We
+                take care of the upkeep, deployment, and customization of your
+                platform's environment. We ensure that you can rest easy at
+                night knowing that your platform is getting the attention it
+                deserves by deploying it to dedicated environments.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END features section -->
+
+      <!-- contact us section -->
+      <section class="contact-us-section bg-skin-primary overflow-hidden">
+        <div
+          data-aos="fade-up"
+          data-aos-anchor-placement="center-bottom"
+          class="triangle-1 w-full max-w-lg"
+        >
+          <img class="w-full" src="./assets/triangle1-1@1x.png" alt="" />
+        </div>
+        <div
+          class="
+            py-4
+            contact-us-text
+            text-center text-4xl text-skin-tertiary
+            font-bold
+            uppercase
+          "
+        >
+          contact us
+        </div>
+        <form action="" class="h-full w-screen text-center px-8 pb-8">
+          <div class="input-outer pb-4">
+            <input
+              type="text"
+              class="input w-full max-w-xl"
+              placeholder="Name"
+              name="name"
+            />
+          </div>
+
+          <div class="input-outer pb-4">
+            <input
+              type="text"
+              class="input w-full max-w-xl"
+              placeholder="Email"
+              name="mail"
+            />
+          </div>
+
+          <div class="input-outer pb-4">
+            <input
+              type="text"
+              class="input w-full max-w-xl"
+              placeholder="Subject"
+              name="subject"
+            />
+          </div>
+
+          <div class="input-outer pb-4">
+            <textarea
+              class="input big h-60 w-full max-w-xl"
+              placeholder="Message"
+              name="comment"
+            ></textarea>
+          </div>
+
+          <button
+            class="
+              button
+              submit-button
+              bg-[#1aa1d3]
+              text-black
+              px-20
+              py-2
+              w-full
+              max-w-md
+            "
+          >
+            <span> Send</span>
+          </button>
+        </form>
+        <div class="triangle-2 w-full flex justify-end">
+          <img
+            class="w-full max-w-lg"
+            src="./assets/triangle1-3@1x.png"
+            alt=""
+          />
+        </div>
+      </section>
+      <!-- END contact us section -->
+
+      <!-- footer-section -->
+      <footer
+        class="footer-section flex justify-center py-5 bg-skin-primary-dark"
+      >
+        <p class="text-skin-tertiary">© 2021 All rights reserved.</p>
+      </footer>
+      <!--End footer-section -->
+    </main>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      /* initialize animate on scroll library */
+      AOS.init();
+
+      //   make sure to load all resources first before firing anything
+      window.addEventListener("load", (event) => {
+        /* make sure page start on top when reloaded */
+        if (history.scrollRestoration) {
+          history.scrollRestoration = "manual";
+        } else {
+          window.onbeforeunload = function () {
+            window.scrollTo(0, 0);
+          };
+        }
+
+        /* set section selectors to variables */
+        // viewport variables
+        const vh = window.innerHeight;
+        const vw = window.innerWidth;
+
+        // navbar section
+        const navbar = document.querySelector(".navbar");
+        const navbarList = document.querySelector(".navbar-list");
+        const navbarHeight = navbar.getBoundingClientRect().bottom;
+        const navbarItemOne = document.querySelector(".nav-link-1");
+        const navbarItemTwo = document.querySelector(".nav-link-2");
+        const navbarItemThree = document.querySelector(".nav-link-3");
+
+        // header section
+        const header = document.querySelector(".header-video-container");
+
+        // about us section
+        const aboutUs = document.querySelector(".about-us-section");
+
+        const logoLeft = document.querySelector(".logo-left");
+        const logoRight = document.querySelector(".logo-right");
+
+        // features section
+        const features = document.querySelector(".features-section");
+
+        // contact us section
+        const contactUs = document.querySelector(".contact-us-section");
+
+        /* HELPER FUNCTIONS */
+        // if you need to add or remove a class on a selected element
+        const addRemoveClass = (el, elAdd = "", elRemove = "") => {
+          if (elAdd != "") {
+            el.classList.add(elAdd);
+          }
+          if (elRemove != "") {
+            el.classList.remove(elRemove);
+          }
+        };
+
+        // parallax helper function.
+        const parallax = (el, direction, yoffset, rate) => {
+          const posX = direction === "horizontal" ? yoffset * rate : 1;
+          const posY = direction === "vertical" ? yoffset * rate : 1;
+          el.style.transform =
+            "translate3d(" + posX + "px, " + posY + "px, 0px)";
+        };
+
+        // smooth scroll function
+        const smoothScroll = (classTo) => {
+          document.querySelector("." + classTo).scrollIntoView({
+            behavior: "smooth",
+          });
+        };
+
+        //   starting points of each section based on their YOffset
+        const aboutUsYoffsetStart = aboutUs.getBoundingClientRect().top;
+        const featuresYoffsetStart = features.getBoundingClientRect().top;
+        const contactUsYoffsetStart = contactUs.getBoundingClientRect().top;
+
+        /* scroll to top btn */
+        const scrollToTopBtn = document.querySelector(".top-top-btn");
+        scrollToTopBtn.addEventListener("click", (event) => {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+
+        /* scroll to certain parts of page when clicking navbar links */
+        // navbar menu click function, for mobile and desktop
+        const burgerMenuContainer = document.querySelector(
+          ".burger-menu-line-container"
+        );
+        const burgerCheckbox = document.querySelector(".burger-input-trigger");
+        const linkElements = document.querySelectorAll(".link-class");
+        linkElements.forEach((elem) => {
+          elem.addEventListener("click", (e) => {
+            const classTo = e.target.getAttribute("data-section");
+            e.preventDefault();
+            if (burgerCheckbox.checked) {
+              burgerCheckbox.checked = false;
+              burgerMenuContainer.click();
+              burgerCheckbox.click();
+            } else {
+              burgerCheckbox.checked = true;
+              burgerMenuContainer.click();
+              burgerCheckbox.click();
+            }
+            smoothScroll(classTo);
+          });
+        });
+
+        /* start of scroll listener and events */
+        window.addEventListener("scroll", function (e) {
+          const yOffset = window.pageYOffset + navbarHeight;
+
+          console.log({ yOffset });
+
+          /* change navbar background using the .navbarDark class and underline on scroll */
+          if (yOffset > 0.5 * aboutUsYoffsetStart) {
+            addRemoveClass(navbarList, "navtext-scrolled", "navtext");
+            addRemoveClass(navbar, "navbarDark", "");
+            addRemoveClass(scrollToTopBtn, "", "hidden");
+          } else {
+            addRemoveClass(scrollToTopBtn, "hidden", "");
+          }
+          if (yOffset > 0.75 * aboutUsYoffsetStart) {
+            addRemoveClass(navbarItemOne, "showBottomBorder", "");
+            addRemoveClass(navbarItemTwo, "", "showBottomBorder");
+            addRemoveClass(navbarItemThree, "", "showBottomBorder");
+          }
+          if (yOffset > 0.9 * featuresYoffsetStart) {
+            addRemoveClass(navbarItemTwo, "showBottomBorder", "");
+            // remove
+            addRemoveClass(navbarItemOne, "", "showBottomBorder");
+            addRemoveClass(navbarItemThree, "", "showBottomBorder");
+          }
+
+          if (yOffset > 0.9 * contactUsYoffsetStart) {
+            addRemoveClass(navbarItemThree, "showBottomBorder", "");
+            // remove
+            addRemoveClass(navbarItemOne, "", "showBottomBorder");
+            addRemoveClass(navbarItemTwo, "", "showBottomBorder");
+          }
+
+          if (yOffset === navbarHeight) {
+            addRemoveClass(navbarItemOne, "", "showBottomBorder");
+            addRemoveClass(navbar, "", "navbarDark");
+            addRemoveClass(navbarList, "navtext", "navtext-scrolled");
+          }
+
+          /* zoom header on scroll */
+          scaleRate = 1 + yOffset / vh;
+          header.style.transform = "scale(" + scaleRate + ")";
+        });
+      });
+    </script>
+  </body>
+</html>
