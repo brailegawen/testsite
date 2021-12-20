@@ -146,8 +146,7 @@
             justify-center
             items-center
             text-2xl
-            font-normal
-            lg:font-extralight
+            font-extralight
             sm:text-4xl
             lg:text-5xl
             xl:text-6xl
@@ -169,7 +168,7 @@
             relative
             about-us-top
             bg-skin-primary-dark
-            h-[75vh]
+            h-[70vh]
             overflow-hidden
             w-full
           "
@@ -178,7 +177,13 @@
             data-aos="slide-right"
             data-aos-duration="2000"
             data-aos-anchor-placement="top-center"
-            class="absolute logo-left max-w-fit w-min h-screen top-0 left-0"
+            class="
+              absolute
+              logo-left
+              max-w-screen-md
+              -left-[20rem]
+              lg:-left-[35rem] lg:top-0 lg:max-w-screen-xl
+            "
             src="./assets/moviry-logo2@1x.png"
             alt=""
           />
@@ -187,14 +192,24 @@
             data-aos="slide-left"
             data-aos-duration="2000"
             data-aos-anchor-placement="top-center"
-            class="absolute logo-right max-w-fit h-screen top-0 right-0"
+            data-aos-anchor=".about-us-top"
+            class="
+              absolute
+              logo-right
+              max-w-screen-sm
+              -bottom-16
+              -right-60
+              lg:-right-[20rem] lg:-bottom-24
+              md:max-w-fit
+              h-fit
+            "
             src="./assets/moviry-logo2-1@1x.png"
             alt=""
           />
 
           <div
             data-aos="zoom-in-up"
-            data-aos-duration="1000"
+            data-aos-duration="2000"
             data-aos-anchor-placement="top-center"
             class="
               about-text
@@ -207,7 +222,7 @@
             "
           >
             <div class="section-title">
-              <p class="text-4xl lg:text-6xl text-skin-secondary pb-4 md:pb-8">
+              <p class="text-5xl lg:text-6xl text-skin-secondary pb-4 md:pb-8">
                 Who We Are
               </p>
             </div>
@@ -215,13 +230,13 @@
               class="
                 about-us-desc
                 font-light
-                text-skin-tertiary
+                text-skin-secondary-light
                 w-9/12
                 md:w-6/12
                 lg:w-5/12
                 text-xl
                 md:text-2xl
-                lg:text-4xl
+                lg:text-3xl
               "
             >
               We create brand-building platforms that are both creative and
@@ -235,7 +250,7 @@
           class="
             about-us-extended-img
             bg-[url('./assets/code.jpg')] bg-center bg-cover bg-fixed
-            h-[25vh]
+            h-[30vh]
           "
         ></div>
       </section>
@@ -248,55 +263,18 @@
             data-aos="fade-right"
             data-aos-duration="1000"
             data-aos-anchor-placement="top-center"
-            class="
-              single-feature
-              relative
-              flex flex-col
-              min-h-screen
-              p-10
-              md:px-32 md:pt-32 md:pb-0 md:h-2/4 md:min-h-0 md:flex-row
-            "
+            class="single-feature"
           >
-            <h2
-              class="
-                text-skin-primary-dark text-5xl
-                font-bold
-                text-center
-                md:hidden
-              "
-            >
-              Discover
-            </h2>
+            <h2 class="feature-title-mobile">Discover</h2>
             <div class="image flex justify-center md:w-full">
-              <img
-                src="./assets/feature1.png"
-                alt=""
-                class="max-w-full md:max-w-fit md:h-fit md:max-h-fit"
-              />
+              <img src="./assets/feature1.png" alt="" class="feature-image" />
             </div>
             <div class="feature-text mt-6 md:pl-10">
-              <h2
-                class="
-                  text-skin-primary-dark text-5xl
-                  font-bold
-                  text-center
-                  hidden
-                  md:block md:text-left md:mb-6
-                "
-              >
-                Discover
-              </h2>
-              <h3 class="font-black text-3xl text-center mb-6 md:text-left">
+              <h2 class="feature-title-left">Discover</h2>
+              <h3 class="feaure-subtitle-left">
                 Discover what's important the most.
               </h3>
-              <p
-                class="
-                  text-skin-primary-dark text-xl
-                  font-normal
-                  text-center
-                  md:text-left md:inline-block
-                "
-              >
+              <p class="feature-description-left">
                 Identifying what's really important is the first step in
                 creating excellent digital platforms. We begin by asking
                 questions such as “Who is your target market?” and “How long
@@ -312,55 +290,18 @@
             data-aos="fade-left"
             data-aos-duration="1000"
             data-aos-anchor-placement="top-center"
-            class="
-              single-feature
-              relative
-              flex flex-col
-              min-h-screen
-              p-10
-              md:px-32 md:pt-32 md:pb-0 md:h-2/4 md:min-h-0 md:flex-row
-            "
+            class="single-feature"
           >
-            <h2
-              class="
-                text-skin-primary-dark text-5xl
-                font-bold
-                text-center
-                md:hidden
-              "
-            >
-              Design
-            </h2>
+            <h2 class="feature-title-mobile">Design</h2>
             <div class="image flex justify-center md:w-full md:order-last">
-              <img
-                src="./assets/feature2.png"
-                alt=""
-                class="max-w-full md:max-w-fit md:h-fit md:max-h-fit"
-              />
+              <img src="./assets/feature2.png" alt="" class="feature-image" />
             </div>
             <div class="feature-text mt-6 md:pr-10">
-              <h2
-                class="
-                  text-skin-primary-dark text-5xl
-                  font-bold
-                  text-center
-                  hidden
-                  md:block md:text-right md:mb-6
-                "
-              >
-                Design
-              </h2>
-              <h3 class="font-black text-3xl text-center mb-6 md:text-right">
+              <h2 class="feature-title-right">Design</h2>
+              <h3 class="feaure-subtitle-right">
                 Design that isn't merely pleasing to the eye.
               </h3>
-              <p
-                class="
-                  text-skin-primary-dark text-xl
-                  font-normal
-                  text-center
-                  md:text-right
-                "
-              >
+              <p class="feature-description-right">
                 We don't make platforms just to look good because we're result-
                 driven and goal-oriented. Instead, we collaborate with you to
                 minimize the clutter and highlight whatpeople love about your
@@ -375,55 +316,18 @@
             data-aos="fade-right"
             data-aos-duration="1000"
             data-aos-anchor-placement="top-center"
-            class="
-              single-feature
-              relative
-              flex flex-col
-              min-h-screen
-              p-10
-              md:px-32 md:pt-32 md:pb-0 md:h-2/4 md:min-h-0 md:flex-row
-            "
+            class="single-feature"
           >
-            <h2
-              class="
-                text-skin-primary-dark text-5xl
-                font-bold
-                text-center
-                md:hidden
-              "
-            >
-              Develop
-            </h2>
+            <h2 class="feature-title-mobile">Develop</h2>
             <div class="image flex justify-center md:w-full">
-              <img
-                src="./assets/feature3.png"
-                alt=""
-                class="max-w-full md:max-w-fit md:h-fit md:max-h-fit"
-              />
+              <img src="./assets/feature3.png" alt="" class="feature-image" />
             </div>
             <div class="feature-text mt-6 md:pl-10">
-              <h2
-                class="
-                  text-skin-primary-dark text-5xl
-                  font-bold
-                  text-center
-                  hidden
-                  md:block md:text-left md:mb-6
-                "
-              >
-                Develop
-              </h2>
-              <h3 class="font-black text-3xl text-center mb-6 md:text-left">
+              <h2 class="feature-title-left">Develop</h2>
+              <h3 class="feaure-subtitle-left">
                 Develop to your full potential
               </h3>
-              <p
-                class="
-                  text-skin-primary-dark text-xl
-                  font-normal
-                  text-center
-                  md:text-left
-                "
-              >
+              <p class="feature-description-left">
                 Our primary strength is our ability to efficiently use the most
                 up- to-date technologies to create digital platforms that
                 achieve any goal or purpose. This empowers our clients to push
@@ -440,56 +344,19 @@
             data-aos="fade-left"
             data-aos-duration="1000"
             data-aos-anchor-placement="top-center"
-            class="
-              single-feature
-              relative
-              flex flex-col
-              min-h-screen
-              p-10
-              md:px-32 md:pt-32 md:pb-0 md:h-2/4 md:min-h-0 md:flex-row
-            "
+            class="single-feature"
           >
-            <h2
-              class="
-                text-skin-primary-dark text-5xl
-                font-bold
-                text-center
-                md:hidden
-              "
-            >
-              Deploy
-            </h2>
+            <h2 class="feature-title-mobile">Deploy</h2>
             <div class="image flex justify-center md:w-full md:order-last">
-              <img
-                src="./assets/feature4.png"
-                alt=""
-                class="max-w-full md:max-w-fit md:h-fit md:max-h-fit"
-              />
+              <img src="./assets/feature4.png" alt="" class="feature-image" />
             </div>
 
             <div class="feature-text mt-6 md:pr-10">
-              <h2
-                class="
-                  text-skin-primary-dark text-5xl
-                  font-bold
-                  text-center
-                  hidden
-                  md:block md:text-right md:mb-6
-                "
-              >
-                Deploy
-              </h2>
-              <h3 class="font-black text-3xl text-center mb-6 md:text-right">
+              <h2 class="feature-title-right">Deploy</h2>
+              <h3 class="feaure-subtitle-right">
                 Deploy in a secure and cost-effective manner.
               </h3>
-              <p
-                class="
-                  text-skin-primary-dark text-xl
-                  font-normal
-                  text-center
-                  md:text-right
-                "
-              >
+              <p class="feature-description-right">
                 Potent, protected, and cost-effective are all characteristics
                 that come to mind when describing your platform's new home. We
                 take care of the upkeep, deployment, and customization of your
@@ -516,65 +383,75 @@
           class="
             py-4
             contact-us-text
-            text-center text-4xl text-skin-tertiary
-            font-bold
+            text-center text-3xl
+            md:text-5xl
+            text-skin-tertiary
+            font-normal
             uppercase
           "
         >
           contact us
         </div>
-        <form action="" class="h-full w-screen text-center px-8 pb-8">
-          <div class="input-outer pb-4">
-            <input
-              type="text"
-              class="input w-full max-w-xl"
-              placeholder="Name"
-              name="name"
-            />
-          </div>
+        <div class="flex justify-center">
+          <form action="" class="h-full w-full max-w-xl px-8 pb-8">
+            <div class="input-outer pb-4">
+              <input
+                type="text"
+                class="input form-input"
+                placeholder="Name"
+                name="name"
+              />
+            </div>
 
-          <div class="input-outer pb-4">
-            <input
-              type="text"
-              class="input w-full max-w-xl"
-              placeholder="Email"
-              name="mail"
-            />
-          </div>
+            <div class="input-outer pb-4">
+              <input
+                type="text"
+                class="input form-input"
+                placeholder="Email"
+                name="mail"
+              />
+            </div>
 
-          <div class="input-outer pb-4">
-            <input
-              type="text"
-              class="input w-full max-w-xl"
-              placeholder="Subject"
-              name="subject"
-            />
-          </div>
+            <div class="input-outer pb-4">
+              <input
+                type="text"
+                class="input form-input"
+                placeholder="Subject"
+                name="subject"
+              />
+            </div>
 
-          <div class="input-outer pb-4">
-            <textarea
-              class="input big h-60 w-full max-w-xl"
-              placeholder="Message"
-              name="comment"
-            ></textarea>
-          </div>
-
-          <button
-            class="
-              button
-              submit-button
-              bg-[#1aa1d3]
-              text-black
-              px-20
-              py-2
-              w-full
-              max-w-md
-            "
-          >
-            <span> Send</span>
-          </button>
-        </form>
-        <div class="triangle-2 w-full flex justify-end">
+            <div class="input-outer pb-4">
+              <textarea
+                class="input big h-60 form-input"
+                placeholder="Message"
+                name="comment"
+              ></textarea>
+            </div>
+            <div class="flex justify-start w-">
+              <button
+                class="
+                  self-start
+                  button
+                  submit-button
+                  bg-[#1aa1d3]
+                  text-black
+                  px-20
+                  py-2
+                  w-full
+                  max-w-fit
+                "
+              >
+                <span> Send</span>
+              </button>
+            </div>
+          </form>
+        </div>
+        <div
+          data-aos="fade-up"
+          data-aos-anchor-placement="center-bottom"
+          class="triangle-2 w-full flex justify-end"
+        >
           <img
             class="w-full max-w-lg"
             src="./assets/triangle1-3@1x.png"
@@ -737,6 +614,8 @@
             addRemoveClass(navbar, "", "navbarDark");
             addRemoveClass(navbarList, "navtext", "navtext-scrolled");
           }
+
+          /* navbar change text underline */
 
           /* zoom header on scroll */
           scaleRate = 1 + yOffset / vh;
