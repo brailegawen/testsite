@@ -22,7 +22,7 @@
         z-10
         w-full
         h-12
-        lg:h-20
+        lg:h-16
         bg-white
         opacity-75
         backdrop-blur-xl
@@ -32,8 +32,8 @@
       "
     >
       <ul class="flex justify-evenly items-center h-full lg:justify-between">
-        <li class="w-24 lg:ml-6 relative">
-          <image src="./assets/Morivy-logo-with-text.svg" alt="logo" />
+        <li class="w-24 lg:w-32 lg:ml-6 relative homer-link cursor-pointer">
+          <image src="./assets/morivy-log.png" alt="logo" />
         </li>
         <li class="w-1/2 h-full hidden lg:flex">
           <ul
@@ -105,21 +105,19 @@
     <!-- HEADER -->
     <header class="relative overflow-hidden h-screen">
       <div
-        class="
-          relative
-          header-video-container
-          overflow-hidden
-          max-w-fit max-h-fit
-          h-full
-          w-fit
-        "
+        class="relative header-video-container max-w-fit max-h-fit h-full w-fit"
       >
         <video
           class="
-            h-fit
-            w-fit
-            max-w-fit max-h-fit
-            lg:w-fit lg:h-fit lg:max-w-fit lg:min-h-fit
+            absolute
+            top-0
+            left-0
+            h-screen
+            w-sceen
+            max-w-fit
+            min-h-fit
+            md:static md:h-fit md:w-fit
+            lg:min-h-fit
           "
           autoplay
           loop
@@ -152,7 +150,7 @@
             xl:text-6xl
           "
         >
-          <span class="text-skin-tertiary">< </span>
+          <span class="text-skin-tertiary anchor-about-us-text">< </span>
           <span class="text-white">Turning Ideas Into Reality</span>
           <span class="text-skin-tertiary"> /></span>
         </div>
@@ -208,8 +206,8 @@
           />
 
           <div
-            data-aos="zoom-in-up"
-            data-aos-duration="2000"
+            data-aos="slide-up"
+            data-aos-duration="1000"
             data-aos-anchor-placement="top-center"
             class="
               about-text
@@ -246,6 +244,7 @@
             </div>
           </div>
         </div>
+        <!-- extended about us image -->
         <div
           class="
             about-us-extended-img
@@ -262,7 +261,6 @@
           <div
             data-aos="fade-right"
             data-aos-duration="1000"
-            data-aos-anchor-placement="top-center"
             class="single-feature"
           >
             <h2 class="feature-title-mobile">Discover</h2>
@@ -289,7 +287,6 @@
           <div
             data-aos="fade-left"
             data-aos-duration="1000"
-            data-aos-anchor-placement="top-center"
             class="single-feature"
           >
             <h2 class="feature-title-mobile">Design</h2>
@@ -374,14 +371,15 @@
       <section class="contact-us-section bg-skin-primary overflow-hidden">
         <div
           data-aos="fade-up"
+          data-aos-duration="2000"
           data-aos-anchor-placement="center-bottom"
-          class="triangle-1 w-full max-w-lg"
+          class="triangle-1 max-w-sm"
         >
           <img class="w-full" src="./assets/triangle1-1@1x.png" alt="" />
         </div>
         <div
           class="
-            py-4
+            pb-12
             contact-us-text
             text-center text-3xl
             md:text-5xl
@@ -393,7 +391,12 @@
           contact us
         </div>
         <div class="flex justify-center">
-          <form action="" class="h-full w-full max-w-xl px-8 pb-8">
+          <form
+            action="mailto:m.gawigawen.braile@gmail.com"
+            method="post"
+            enctype="text/plain"
+            class="h-full w-full max-w-xl px-8 pb-8"
+          >
             <div class="input-outer pb-4">
               <input
                 type="text"
@@ -405,7 +408,7 @@
 
             <div class="input-outer pb-4">
               <input
-                type="text"
+                type="email"
                 class="input form-input"
                 placeholder="Email"
                 name="mail"
@@ -434,8 +437,8 @@
                   self-start
                   button
                   submit-button
-                  bg-[#1aa1d3]
-                  text-black
+                  bg-skin-primary-light
+                  text-skin-primary
                   px-20
                   py-2
                   w-full
@@ -449,14 +452,11 @@
         </div>
         <div
           data-aos="fade-up"
-          data-aos-anchor-placement="center-bottom"
-          class="triangle-2 w-full flex justify-end"
+          data-aos-duration="2000"
+          data-aos-anchor=".contact-us-section"
+          class="triangle-2 flex justify-end"
         >
-          <img
-            class="w-full max-w-lg"
-            src="./assets/triangle1-3@1x.png"
-            alt=""
-          />
+          <img class="max-w-sm" src="./assets/triangle1-3@1x.png" alt="" />
         </div>
       </section>
       <!-- END contact us section -->
@@ -474,6 +474,12 @@
     <script>
       //   make sure to load all resources first before firing anything
       window.addEventListener("load", (event) => {
+        /* Home link */
+        const homeLink = document.querySelector(".homer-link");
+        homeLink.addEventListener("click", function () {
+          location.href = "./";
+        });
+
         /* initialize animate on scroll library */
         AOS.init();
 
@@ -579,8 +585,6 @@
         window.addEventListener("scroll", function (e) {
           const yOffset = window.pageYOffset + navbarHeight;
 
-          console.log({ yOffset });
-
           /* change navbar background using the .navbarDark class and underline on scroll */
           if (yOffset > 0.5 * aboutUsYoffsetStart) {
             addRemoveClass(navbarList, "navtext-scrolled", "navtext");
@@ -618,7 +622,8 @@
           /* navbar change text underline */
 
           /* zoom header on scroll */
-          scaleRate = 1 + yOffset / vh;
+          scaleRate = 1 + yOffset / 1000;
+          scaleRateMobile = 1 + yOffset / 100;
           header.style.transform = "scale(" + scaleRate + ")";
         });
       });
