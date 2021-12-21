@@ -10,9 +10,9 @@
   </head>
   <body>
     <!-- To Top Button -->
-    <div class="fixed bottom-4 right-4 cursor-pointer top-top-btn z-10 hidden">
+    <!-- <div class="fixed bottom-4 right-4 cursor-pointer top-top-btn z-10 hidden">
       <img src="./assets/top.png" alt="" />
-    </div>
+    </div> -->
     <!-- END To Top Button -->
     <!-- NAVBAR -->
     <nav class="navbar">
@@ -54,7 +54,7 @@
 
     <!-- mobile navbar -->
 
-    <div class="h-16 w-12 absolute top-6 right-4 lg:hidden">
+    <div class="h-16 w-12 absolute top-6 right-4 lg:hidden overflow-hidden">
       <input class="burger-input-trigger" type="checkbox" id="navi-burger" />
       <label class="burger-menu-line-container" for="navi-burger">
         <span class="burger-line relative mt-4 bg-skin-primary"></span>
@@ -62,32 +62,18 @@
       <div class="burger-page-background">&nbsp</div>
       <div class="burger-menu">
         <ul class="burger-list-menu">
-          <li class="link-class">
-            <a
-              type="button"
-              data-section="about-us-section"
-              class="burger-link"
-              href="#"
+          <li class="link-class p-2 md:p-4">
+            <a data-section="about-us-section" class="burger-link" href="#"
               >Who We Are</a
             >
           </li>
-          <li class="link-class">
-            <a
-              type="button"
-              data-section="features-section"
-              class="burger-link"
-              href="#"
-            >
+          <li class="link-class p-2 md:p-4">
+            <a data-section="features-section" class="burger-link" href="#">
               What We Do</a
             >
           </li>
-          <li class="link-class">
-            <a
-              type="button"
-              data-section="contact-us-section"
-              class="burger-link"
-              href="#"
-            >
+          <li class="link-class p-2 md:p-4">
+            <a data-section="contact-us-section" class="burger-link" href="#">
               Get In Touch</a
             >
           </li>
@@ -102,7 +88,13 @@
       <div
         class="relative header-video-container max-w-fit max-h-fit h-full w-fit"
       >
-        <video class="header-video" autoplay loop muted>
+        <video
+          class="header-video"
+          poster="./assets/video-poster.png"
+          autoplay
+          loop
+          muted
+        >
           <source src="./assets/hero-blurry.webm" type="video/webm" />
           <source src="./assets/hero-blurry.mp4" type="video/mp4" />
           Your browser is not supported!
@@ -162,13 +154,11 @@
           </div>
         </div>
         <!-- extended about us image -->
-        <div
-          class="
-            about-us-extended-img
-            bg-[url('./assets/code.jpg')] bg-center bg-cover bg-fixed
-            h-[30vh]
-          "
-        ></div>
+        <div class="cont">
+          <div class="relative about-us-extended-img h-[30vh] overflow-hidden">
+            <div class="about-us-image"></div>
+          </div>
+        </div>
       </section>
       <!-- END about use section -->
 
@@ -181,10 +171,10 @@
             class="single-feature"
           >
             <h2 class="feature-title-mobile">Discover</h2>
-            <div class="image flex justify-center md:w-full">
+            <div class="image flex justify-center lg:w-full">
               <img src="./assets/feature1.png" alt="" class="feature-image" />
             </div>
-            <div class="feature-text mt-6 md:pl-10">
+            <div class="feature-text mt-6 lg:pl-10">
               <h2 class="feature-title-left">Discover</h2>
               <h3 class="feaure-subtitle-left">
                 Discover what's important the most.
@@ -207,10 +197,10 @@
             class="single-feature"
           >
             <h2 class="feature-title-mobile">Design</h2>
-            <div class="image flex justify-center md:w-full md:order-last">
+            <div class="image flex justify-center lg:w-full lg:order-last">
               <img src="./assets/feature2.png" alt="" class="feature-image" />
             </div>
-            <div class="feature-text mt-6 md:pr-10">
+            <div class="feature-text mt-6 lg:pr-10">
               <h2 class="feature-title-right">Design</h2>
               <h3 class="feaure-subtitle-right">
                 Design that isn't merely pleasing to the eye.
@@ -233,19 +223,19 @@
             class="single-feature"
           >
             <h2 class="feature-title-mobile">Develop</h2>
-            <div class="image flex justify-center md:w-full">
+            <div class="image flex justify-center lg:w-full">
               <img src="./assets/feature3.png" alt="" class="feature-image" />
             </div>
-            <div class="feature-text mt-6 md:pl-10">
+            <div class="feature-text mt-6 lg:pl-10">
               <h2 class="feature-title-left">Develop</h2>
               <h3 class="feaure-subtitle-left">
-                Develop to your full potential.
+                Develop to your full potential
               </h3>
               <p class="feature-description-left">
                 Our primary strength is our ability to efficiently use the most
-                up-to-date technologies to create digital platforms that achieve
-                any goal or purpose. This empowers our clients to push the
-                boundaries of their ideas, knowing that whatever their
+                up- to-date technologies to create digital platforms that
+                achieve any goal or purpose. This empowers our clients to push
+                the boundaries of their ideas, knowing that whatever their
                 imagination conjures up, we can execute. Your wish is our
                 command, and we are the genie in your jar. It's not for nothing
                 that our motto is “build a better future by turning ideas into
@@ -261,11 +251,11 @@
             class="single-feature"
           >
             <h2 class="feature-title-mobile">Deploy</h2>
-            <div class="image flex justify-center md:w-full md:order-last">
+            <div class="image flex justify-center lg:w-full lg:order-last">
               <img src="./assets/feature4.png" alt="" class="feature-image" />
             </div>
 
-            <div class="feature-text mt-6 md:pr-10">
+            <div class="feature-text mt-6 lg:pr-10">
               <h2 class="feature-title-right">Deploy</h2>
               <h3 class="feaure-subtitle-right">
                 Deploy in a secure and cost-effective manner.
@@ -282,6 +272,7 @@
           </div>
         </div>
       </section>
+
       <!-- END features section -->
 
       <!-- contact us section -->
@@ -351,7 +342,7 @@
             <div class="flex justify-start w-">
               <button
                 class="
-                  self-start
+                  sm:self-start
                   button
                   submit-button
                   bg-skin-primary-light
@@ -359,7 +350,7 @@
                   px-20
                   py-2
                   w-full
-                  max-w-fit
+                  sm:max-w-fit
                 "
               >
                 <span> Send</span>
@@ -393,10 +384,10 @@
     <script>
       //   make sure to load all resources first before firing anything
       window.addEventListener("load", (event) => {
-        /* Home link */
+        /* scroll to top when clicking logo */
         const homeLink = document.querySelector(".homer-link");
-        homeLink.addEventListener("click", function () {
-          location.href = "./";
+        homeLink.addEventListener("click", (event) => {
+          window.scrollTo({ top: 0, behavior: "smooth" });
         });
 
         /* initialize animate on scroll library */
@@ -468,12 +459,6 @@
         const aboutUsYoffsetStart = aboutUs.getBoundingClientRect().top;
         const featuresYoffsetStart = features.getBoundingClientRect().top;
         const contactUsYoffsetStart = contactUs.getBoundingClientRect().top;
-
-        /* scroll to top btn */
-        const scrollToTopBtn = document.querySelector(".top-top-btn");
-        scrollToTopBtn.addEventListener("click", (event) => {
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        });
 
         // burger menu click function
         const burgerMenuContainer = document.querySelector(
@@ -554,8 +539,9 @@
 
           /* extended image */
 
-          // console.log({ yOffset });
-          // console.log({ extendedImageContainer });
+          console.log({ yOffset });
+          console.log({ extendedImageContainer });
+
           // if (
           //   yOffset > 0.9 * extendedImageContainer &&
           //   yOffset < extendedImageContainer

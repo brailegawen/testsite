@@ -839,10 +839,6 @@ select {
   z-index: 10;
 }
 
-.-z-50 {
-  z-index: -50;
-}
-
 .mt-4 {
   margin-top: 1rem;
 }
@@ -871,12 +867,12 @@ select {
   height: 100vh;
 }
 
-.h-60 {
-  height: 15rem;
-}
-
 .h-\[30vh\] {
   height: 30vh;
+}
+
+.h-60 {
+  height: 15rem;
 }
 
 .max-h-fit {
@@ -957,10 +953,6 @@ select {
   justify-content: space-evenly;
 }
 
-.self-start {
-  align-self: flex-start;
-}
-
 .overflow-hidden {
   overflow: hidden;
 }
@@ -985,20 +977,8 @@ select {
   background-color: var(--color-primary-dark);
 }
 
-.bg-\[url\(\'\.\/assets\/code\.jpg\'\)\] {
-  background-image: url("../assets/code.jpg");
-}
-
-.bg-cover {
-  background-size: cover;
-}
-
-.bg-fixed {
-  background-attachment: fixed;
-}
-
-.bg-center {
-  background-position: center;
+.p-2 {
+  padding: 0.5rem;
 }
 
 .px-8 {
@@ -1210,7 +1190,7 @@ body {
   top: 0px;
   --tw-rotate: -45deg;
   transform: var(--tw-transform);
-  background-color: var(--color-tertiary);
+  background-color: var(--color-secondary);
 }
 
 .burger-input-trigger:checked
@@ -1219,7 +1199,7 @@ body {
   top: 0px;
   --tw-rotate: 45deg;
   transform: var(--tw-transform);
-  background-color: var(--color-tertiary);
+  background-color: var(--color-secondary);
 }
 
 /* page background to be triggered by burger menu */
@@ -1245,16 +1225,18 @@ body {
 }
 
 .burger-menu {
-  position: fixed;
-  left: -100%;
+  position: absolute;
+  left: 0px;
   top: 7rem;
   z-index: 30;
   width: 100%;
-  transition: all 0.5s ease-out;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
 }
 
 .burger-input-trigger:checked ~ .burger-menu {
-  left: 0px;
+  position: fixed;
+  opacity: 1;
 }
 
 .burger-list-menu {
@@ -1272,7 +1254,7 @@ body {
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 300;
-  color: var(--color-tertiary);
+  color: var(--color-secondary);
 }
 
 @media (min-width: 768px) {
@@ -1289,6 +1271,7 @@ body {
 /* header */
 
 .header-video {
+  /* @apply absolute top-0 left-0 h-screen w-screen min-w-fit min-h-fit md:static md:h-fit md:w-fit lg:max-w-fit; */
   position: absolute;
   top: 0px;
   left: 0px;
@@ -1302,11 +1285,7 @@ body {
   min-width: fit-content;
 }
 
-@media (min-width: 768px) {
-  .header-video {
-    position: static;
-  }
-
+@media (min-width: 1280px) {
   .header-video {
     height: -webkit-fit-content;
     height: -moz-fit-content;
@@ -1320,11 +1299,9 @@ body {
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1536px) {
   .header-video {
-    min-height: -webkit-fit-content;
-    min-height: -moz-fit-content;
-    min-height: fit-content;
+    position: static;
   }
 }
 
@@ -1475,12 +1452,14 @@ body {
 .single-feature {
   position: relative;
   display: flex;
-  min-height: 100vh;
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
   flex-direction: column;
   padding: 2.5rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .single-feature {
     height: 50%;
   }
@@ -1515,7 +1494,7 @@ body {
   color: var(--color-primary);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .feature-title-mobile {
     display: none;
   }
@@ -1525,7 +1504,7 @@ body {
   max-width: 100%;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .feature-image {
     height: -webkit-fit-content;
     height: -moz-fit-content;
@@ -1533,9 +1512,9 @@ body {
   }
 
   .feature-image {
-    max-height: -webkit-fit-content;
-    max-height: -moz-fit-content;
-    max-height: fit-content;
+    min-height: -webkit-fit-content;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
   }
 
   .feature-image {
@@ -1554,7 +1533,7 @@ body {
   color: var(--color-primary);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .feature-title-left {
     margin-bottom: 1.5rem;
   }
@@ -1577,7 +1556,7 @@ body {
   color: var(--color-primary);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .feaure-subtitle-left {
     text-align: left;
   }
@@ -1591,7 +1570,7 @@ body {
   color: var(--color-primary);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .feature-description-left {
     display: inline-block;
   }
@@ -1610,7 +1589,7 @@ body {
   color: var(--color-primary);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .feature-title-right {
     margin-bottom: 1.5rem;
   }
@@ -1633,7 +1612,7 @@ body {
   color: var(--color-primary);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .feaure-subtitle-right {
     text-align: right;
   }
@@ -1647,7 +1626,7 @@ body {
   color: var(--color-primary);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .feature-description-right {
     display: inline-block;
   }
@@ -1682,25 +1661,49 @@ body {
   color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 
-@media (min-width: 768px) {
-  .md\:order-last {
-    order: 9999;
+.about-us-image {
+  background-image: url("../assets/code.jpg");
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  clip: rect(0 auto auto 0);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.about-us-image::before {
+  content: "";
+  position: fixed;
+  background: inherit;
+  display: block;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transform: translateZ(0);
+}
+
+@media (min-width: 640px) {
+  .sm\:max-w-fit {
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
   }
 
-  .md\:w-full {
-    width: 100%;
+  .sm\:self-start {
+    align-self: flex-start;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:p-4 {
+    padding: 1rem;
   }
 
   .md\:pb-8 {
     padding-bottom: 2rem;
-  }
-
-  .md\:pl-10 {
-    padding-left: 2.5rem;
-  }
-
-  .md\:pr-10 {
-    padding-right: 2.5rem;
   }
 
   .md\:text-5xl {
@@ -1710,6 +1713,10 @@ body {
 }
 
 @media (min-width: 1024px) {
+  .lg\:order-last {
+    order: 9999;
+  }
+
   .lg\:ml-6 {
     margin-left: 1.5rem;
   }
@@ -1726,12 +1733,24 @@ body {
     width: 8rem;
   }
 
+  .lg\:w-full {
+    width: 100%;
+  }
+
   .lg\:justify-between {
     justify-content: space-between;
   }
 
   .lg\:pb-20 {
     padding-bottom: 5rem;
+  }
+
+  .lg\:pl-10 {
+    padding-left: 2.5rem;
+  }
+
+  .lg\:pr-10 {
+    padding-right: 2.5rem;
   }
 
   .lg\:text-6xl {
