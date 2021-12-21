@@ -10,30 +10,15 @@
   </head>
   <body>
     <!-- To Top Button -->
-    <div class="fixed bottom-4 right-4 cursor-pointer top-top-btn z-50 hidden">
+    <div class="fixed bottom-4 right-4 cursor-pointer top-top-btn z-10 hidden">
       <img src="./assets/top.png" alt="" />
     </div>
     <!-- END To Top Button -->
     <!-- NAVBAR -->
-    <nav
-      class="
-        navbar
-        fixed
-        z-10
-        w-full
-        h-12
-        lg:h-16
-        bg-white
-        opacity-75
-        backdrop-blur-xl
-        transition-all
-        duration-1000
-        ease-in-out
-      "
-    >
+    <nav class="navbar">
       <ul class="flex justify-evenly items-center h-full lg:justify-between">
         <li class="w-24 lg:w-32 lg:ml-6 relative homer-link cursor-pointer">
-          <image src="./assets/morivy-log.png" alt="logo" />
+          <img src="./assets/morivy-log.png" alt="logo" />
         </li>
         <li class="w-1/2 h-full hidden lg:flex">
           <ul
@@ -77,7 +62,7 @@
       <div class="burger-page-background">&nbsp</div>
       <div class="burger-menu">
         <ul class="burger-list-menu">
-          <li class="burger-link-1 link-class">
+          <li class="link-class">
             <a
               type="button"
               data-section="about-us-section"
@@ -86,13 +71,23 @@
               >Who We Are</a
             >
           </li>
-          <li class="burger-link-2 link-class">
-            <a data-section="features-section" class="burger-link" href="#">
+          <li class="link-class">
+            <a
+              type="button"
+              data-section="features-section"
+              class="burger-link"
+              href="#"
+            >
               What We Do</a
             >
           </li>
-          <li class="burger-link-3 link-class">
-            <a data-section="contact-us-section" class="burger-link" href="#">
+          <li class="link-class">
+            <a
+              type="button"
+              data-section="contact-us-section"
+              class="burger-link"
+              href="#"
+            >
               Get In Touch</a
             >
           </li>
@@ -107,49 +102,15 @@
       <div
         class="relative header-video-container max-w-fit max-h-fit h-full w-fit"
       >
-        <video
-          class="
-            absolute
-            top-0
-            left-0
-            h-screen
-            w-sceen
-            max-w-fit
-            min-h-fit
-            md:static md:h-fit md:w-fit
-            lg:min-h-fit
-          "
-          autoplay
-          loop
-          muted
-        >
+        <video class="header-video" autoplay loop muted>
+          <source src="./assets/hero-blurry.webm" type="video/webm" />
           <source src="./assets/hero-blurry.mp4" type="video/mp4" />
+          Your browser is not supported!
         </video>
       </div>
 
-      <div
-        class="
-          absolute
-          top-[40%]
-          lg:top-[30%]
-          left-2/4
-          -translate-x-1/2
-          translate-y-1/2
-          w-full
-        "
-      >
-        <div
-          class="
-            flex
-            justify-center
-            items-center
-            text-2xl
-            font-extralight
-            sm:text-4xl
-            lg:text-5xl
-            xl:text-6xl
-          "
-        >
+      <div class="header-text-container">
+        <div class="header-text">
           <span class="text-skin-tertiary anchor-about-us-text">< </span>
           <span class="text-white">Turning Ideas Into Reality</span>
           <span class="text-skin-tertiary"> /></span>
@@ -161,27 +122,12 @@
     <main>
       <!-- about use section -->
       <section class="about-us-section min-h-screen">
-        <div
-          class="
-            relative
-            about-us-top
-            bg-skin-primary-dark
-            h-[70vh]
-            overflow-hidden
-            w-full
-          "
-        >
+        <div class="about-us-top">
           <img
             data-aos="slide-right"
             data-aos-duration="2000"
             data-aos-anchor-placement="top-center"
-            class="
-              absolute
-              logo-left
-              max-w-screen-md
-              -left-[20rem]
-              lg:-left-[35rem] lg:top-0 lg:max-w-screen-xl
-            "
+            class="logo-left"
             src="./assets/moviry-logo2@1x.png"
             alt=""
           />
@@ -191,16 +137,7 @@
             data-aos-duration="2000"
             data-aos-anchor-placement="top-center"
             data-aos-anchor=".about-us-top"
-            class="
-              absolute
-              logo-right
-              max-w-screen-sm
-              -bottom-16
-              -right-60
-              lg:-right-[20rem] lg:-bottom-24
-              md:max-w-fit
-              h-fit
-            "
+            class="logo-right"
             src="./assets/moviry-logo2-1@1x.png"
             alt=""
           />
@@ -209,34 +146,14 @@
             data-aos="slide-up"
             data-aos-duration="1000"
             data-aos-anchor-placement="top-center"
-            class="
-              about-text
-              w-full
-              h-full
-              flex flex-col
-              justify-center
-              items-center
-              text-center
-            "
+            class="about-text"
           >
             <div class="section-title">
               <p class="text-5xl lg:text-6xl text-skin-secondary pb-4 md:pb-8">
                 Who We Are
               </p>
             </div>
-            <div
-              class="
-                about-us-desc
-                font-light
-                text-skin-secondary-light
-                w-9/12
-                md:w-6/12
-                lg:w-5/12
-                text-xl
-                md:text-2xl
-                lg:text-3xl
-              "
-            >
+            <div class="about-us-description">
               We create brand-building platforms that are both creative and
               cost-effective. We specialize in both website and mobile
               application design development, big data solutions and other
@@ -375,7 +292,7 @@
           data-aos-anchor-placement="center-bottom"
           class="triangle-1 max-w-sm"
         >
-          <img class="w-full" src="./assets/triangle1-1@1x.png" alt="" />
+          <img class="w-full" src="./assets/triangle1.png" alt="" />
         </div>
         <div
           class="
@@ -454,9 +371,11 @@
           data-aos="fade-up"
           data-aos-duration="2000"
           data-aos-anchor=".contact-us-section"
-          class="triangle-2 flex justify-end"
+          class="triangle-2 w-full flex justify-end"
         >
-          <img class="max-w-sm" src="./assets/triangle1-3@1x.png" alt="" />
+          <div class="triangle-2-container max-w-sm">
+            <img class="w-full" src="./assets/triangle2.png" alt="" />
+          </div>
         </div>
       </section>
       <!-- END contact us section -->
@@ -532,13 +451,13 @@
         };
         // parallax helper function.
         const parallax = (el, direction, yoffset, rate) => {
-          const posX = direction === "horizontal" ? yoffset * rate : 1;
-          const posY = direction === "vertical" ? yoffset * rate : 1;
+          const posX = direction === "horizontal" ? yoffset * rate : 0;
+          const posY = direction === "vertical" ? yoffset * rate : 0;
           el.style.transform =
             "translate3d(" + posX + "px, " + posY + "px, 0px)";
         };
-        // smooth scroll function
 
+        // smooth scroll function
         const smoothScroll = (classTo) => {
           document.querySelector("." + classTo).scrollIntoView({
             behavior: "smooth",
@@ -567,6 +486,12 @@
             const classTo = e.target.getAttribute("data-section");
             e.preventDefault();
             if (burgerCheckbox.checked) {
+              /*
+                1. set checkbox to flase
+                2. click on the chechbox label
+                3. click on the element that's wrapping the checkbox
+                4. on mobile, hide the top-top-btn
+              */
               burgerCheckbox.checked = false;
               burgerMenuContainer.click();
               burgerCheckbox.click();
@@ -580,6 +505,9 @@
         });
 
         /* scroll to certain parts of page when clicking navbar links */
+        const extendedImage = document.querySelector(".about-us-extended-img");
+        const extendedImageContainer =
+          extendedImage.getBoundingClientRect().top;
 
         /* start of scroll listener and events */
         window.addEventListener("scroll", function (e) {
@@ -619,14 +547,27 @@
             addRemoveClass(navbarList, "navtext", "navtext-scrolled");
           }
 
-          /* navbar change text underline */
-
           /* zoom header on scroll */
           scaleRate = 1 + yOffset / 1000;
           scaleRateMobile = 1 + yOffset / 100;
           header.style.transform = "scale(" + scaleRate + ")";
+
+          /* extended image */
+
+          // console.log({ yOffset });
+          // console.log({ extendedImageContainer });
+          // if (
+          //   yOffset > 0.9 * extendedImageContainer &&
+          //   yOffset < extendedImageContainer
+          // ) {
+          //   parallax(extendedImage, "vertical", yOffset, -0.15);
+          // }
         });
       });
     </script>
+    <script src="./js/html5shiv.js"></script>
+    <script src="./js/respond.js"></script>
+    <script src="./js/selectivizr-1.0.2.min.js"></script>
+    <script src="./js/waypoint.js"></script>
   </body>
 </html>
