@@ -87,13 +87,16 @@
           class="header-video"
           poster="./assets/video-poster.png"
           preload
-          autoplay
           muted
           loop
-          playsinline
         >
-          <source src="./assets/hero-blurry.webm" type="video/webm" />
-          <source src="./assets/hero-blurry.mp4" type="video/mp4" />
+          <source
+            class="vid"
+            src="./assets/hero-blurry.webm"
+            type="video/webm"
+          />
+          <source class="vid" src="./assets/hero-blurry.mp4" type="video/mp4" />
+
           Your browser is not supported!
         </video>
       </div>
@@ -174,6 +177,20 @@
 
       <!-- features section -->
       <section class="features-section bg-skin-tertiary-light lg:pb-20">
+        <div data-aos="fade" data-aos-duration="1500" class="feature-tagline">
+          <div class="section-title">
+            <p class="text-5xl lg:text-6xl text-skin-primary pt-4 md:pt-20">
+              What We Do
+            </p>
+          </div>
+          <div class="feature-tagline-description">
+            Our mission is simple: to make great ideas a reality. Our team
+            specializes in information technology, software development, web
+            development, and mobile app development using our tried and true 4-D
+            Method.
+          </div>
+        </div>
+
         <div class="features-wrap w-screen max-w-fit overflow-x-hidden">
           <div
             data-aos="fade-right"
@@ -181,15 +198,10 @@
             class="single-feature"
           >
             <h2 class="feature-title-mobile">Discover</h2>
-            <div class="image flex justify-center lg:w-full lg:h-fit lg:hidden">
+            <div class="image flex justify-center">
               <img src="./assets/feature1.png" alt="" class="feature-image" />
             </div>
-            <div class="feature-text mt-6 lg:pl-10">
-              <img
-                src="./assets/feature1.png"
-                alt=""
-                class="feature-image-lg-left"
-              />
+            <div class="feature-text mt-6 xl:pl-10">
               <h2 class="feature-title-left">Discover</h2>
               <h3 class="feaure-subtitle-left">
                 Discover what's the most important
@@ -221,22 +233,10 @@
             class="single-feature"
           >
             <h2 class="feature-title-mobile">Design</h2>
-            <div
-              class="
-                image
-                flex
-                justify-center
-                lg:w-full lg:hidden lg:order-last
-              "
-            >
+            <div class="image flex justify-center xl:w-full xl:order-last">
               <img src="./assets/feature2.png" alt="" class="feature-image" />
             </div>
-            <div class="feature-text mt-6 lg:pr-10">
-              <img
-                src="./assets/feature2.png"
-                alt=""
-                class="feature-image-lg-right"
-              />
+            <div class="feature-text mt-6 xl:pr-10">
               <h2 class="feature-title-right">Design</h2>
               <h3 class="feaure-subtitle-right">
                 Design not only to please the eye
@@ -264,15 +264,10 @@
             class="single-feature"
           >
             <h2 class="feature-title-mobile">Develop</h2>
-            <div class="image flex justify-center lg:w-full lg:hidden">
+            <div class="image flex justify-center xl:w-full">
               <img src="./assets/feature3.png" alt="" class="feature-image" />
             </div>
-            <div class="feature-text mt-6 lg:pl-10">
-              <img
-                src="./assets/feature3.png"
-                alt=""
-                class="feature-image-lg-left"
-              />
+            <div class="feature-text mt-6 xl:pl-10">
               <h2 class="feature-title-left">Develop</h2>
               <h3 class="feaure-subtitle-left">Develop your full potential</h3>
               <p class="feature-description-left">
@@ -299,23 +294,11 @@
             class="single-feature"
           >
             <h2 class="feature-title-mobile">Deploy</h2>
-            <div
-              class="
-                image
-                flex
-                justify-center
-                lg:w-full lg:order-last lg:hidden
-              "
-            >
+            <div class="image flex justify-center xl:w-full xl:order-last">
               <img src="./assets/feature4.png" alt="" class="feature-image" />
             </div>
 
-            <div class="feature-text mt-6 lg:pr-10">
-              <img
-                src="./assets/feature4.png"
-                alt=""
-                class="feature-image-lg-right"
-              />
+            <div class="feature-text mt-6 xl:pr-10">
               <h2 class="feature-title-right">Deploy</h2>
               <h3 class="feaure-subtitle-right">
                 Deploy in a secure and cost-effective environment
@@ -348,21 +331,38 @@
           data-aos-anchor-placement="center-bottom"
           class="triangle-1 max-w-sm"
         >
-          <img class="w-full" src="./assets/triangle1.png" alt="" />
+          <img class="w-full md:w-3/4" src="./assets/triangle1.png" alt="" />
         </div>
+
         <div
-          class="
-            pb-12
-            contact-us-text
-            text-center text-3xl
-            md:text-5xl
-            text-skin-tertiary
-            font-normal
-            uppercase
-          "
+          data-aos="fade"
+          data-aos-duration="1500"
+          class="contact-us-tagline"
         >
-          contact us
+          <div
+            class="
+              pb-8
+              text-center text-3xl
+              md:text-5xl
+              text-skin-tertiary
+              font-normal
+            "
+          >
+            Get In Touch
+          </div>
+          <div class="contact-us-tagline-description">
+            <p>We'd love to hear from you!</p>
+            <p>
+              At Morivy, we believe that effective communication is essential to
+              producing high-quality products.
+            </p>
+            <p>
+              Do you have any questions or concerns? Please do not hesitate to
+              contact us with anything you want to discuss.
+            </p>
+          </div>
         </div>
+
         <div class="flex justify-center">
           <form
             action="mailto:m.gawigawen.braile@gmail.com"
@@ -429,8 +429,8 @@
           data-aos-anchor=".contact-us-section"
           class="triangle-2 w-full flex justify-end"
         >
-          <div class="triangle-2-container max-w-sm">
-            <img class="w-full" src="./assets/triangle2.png" alt="" />
+          <div class="triangle-2-container max-w-sm flex justify-end">
+            <img class="w-full md:w-3/4" src="./assets/triangle2.png" alt="" />
           </div>
         </div>
       </section>
@@ -446,19 +446,18 @@
     </main>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <script>
       //   make sure to load all resources first before firing anything
       window.addEventListener("load", (event) => {
-        /* scroll to top when clicking logo */
-        const homeLink = document.querySelector(".homer-link");
-        homeLink.addEventListener("click", (event) => {
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        });
+        // autoplay
+        const headerVideo = document.querySelector(".header-video");
+        headerVideo.play();
 
         /* initialize animate on scroll library */
         AOS.init();
 
-        /* make sure page start on top when reloaded */
+        /* make sure page starts on top when reloaded */
         if (history.scrollRestoration) {
           history.scrollRestoration = "manual";
         } else {
@@ -485,7 +484,6 @@
 
         // about us section
         const aboutUs = document.querySelector(".about-us-section");
-
         const logoLeft = document.querySelector(".logo-left");
         const logoRight = document.querySelector(".logo-right");
 
@@ -494,6 +492,7 @@
 
         // contact us section
         const contactUs = document.querySelector(".contact-us-section");
+        /* END set section selectors to variables */
 
         /* HELPER FUNCTIONS */
         // if you need to add or remove a class on a selected element
@@ -519,13 +518,14 @@
             behavior: "smooth",
           });
         };
+        /* END HELPER FUNCTIONS */
 
         //   starting points of each section based on their YOffset
         const aboutUsYoffsetStart = aboutUs.getBoundingClientRect().top;
         const featuresYoffsetStart = features.getBoundingClientRect().top;
         const contactUsYoffsetStart = contactUs.getBoundingClientRect().top;
 
-        // burger menu click function
+        /* scroll to certain parts of page when clicking navbar links */
         const burgerMenuContainer = document.querySelector(
           ".burger-menu-line-container"
         );
@@ -540,7 +540,7 @@
                 1. set checkbox to flase
                 2. click on the chechbox label
                 3. click on the element that's wrapping the checkbox
-                4. on mobile, hide the top-top-btn
+             
               */
               burgerCheckbox.checked = false;
               burgerMenuContainer.click();
@@ -554,20 +554,31 @@
           });
         });
 
-        /* scroll to certain parts of page when clicking navbar links */
-        const extendedImage = document.querySelector(".about-us-extended-img");
-        const extendedImageContainer =
-          extendedImage.getBoundingClientRect().top;
+        /* scroll to top when clicking logo */
+        const homeLink = document.querySelector(".homer-link");
+        homeLink.addEventListener("click", (event) => {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
 
         /* start of scroll listener and events */
         window.addEventListener("scroll", function (e) {
           const yOffset = window.pageYOffset + navbarHeight;
+          const bottomOfViewPort = yOffset + vh;
+
+          /* pause/ play video here */
+          if (bottomOfViewPort > 0.7 * featuresYoffsetStart) {
+            headerVideo.pause();
+          } else {
+            headerVideo.play();
+            /* zoom header on scroll */
+            scaleRate = 1 + yOffset / 1000;
+            header.style.transform = "scale(" + scaleRate + ")";
+          }
 
           /* change navbar background using the .navbarDark class and underline on scroll */
           if (yOffset > 0.5 * aboutUsYoffsetStart) {
             addRemoveClass(navbarList, "navtext-scrolled", "navtext");
             addRemoveClass(navbar, "navbarDark", "");
-          } else {
           }
           if (yOffset > 0.75 * aboutUsYoffsetStart) {
             addRemoveClass(navbarItemOne, "showBottomBorder", "");
@@ -594,15 +605,11 @@
             addRemoveClass(navbar, "", "navbarDark");
             addRemoveClass(navbarList, "navtext", "navtext-scrolled");
           }
-
-          /* zoom header on scroll */
-          scaleRate = 1 + yOffset / 1000;
-          scaleRateMobile = 1 + yOffset / 100;
-          header.style.transform = "scale(" + scaleRate + ")";
         });
       });
     </script>
-    <!-- <script src="./js/html5shiv.js"></script>
+    <!-- <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/html5shiv.js"></script>
     <script src="./js/respond.js"></script>
     <script src="./js/selectivizr-1.0.2.min.js"></script>
     <script src="./js/waypoint.js"></script> -->
