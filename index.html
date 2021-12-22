@@ -85,7 +85,6 @@
       >
         <video
           class="header-video"
-          poster="./assets/video-poster.png"
           preload
           playsinline
           disablePictureInPicture
@@ -109,13 +108,6 @@
           <span class="text-white">Turning Ideas Into Reality</span>
           <span class="text-skin-tertiary"> /></span>
         </div>
-        <!-- <div class="header-sub-container">
-          <span class="header-sub-text"
-            >Through our "4-Ds", we seek to innovate our products from strategy
-            to customer-centric support by developing a variety of highly
-            specialized information technology.</span
-          >
-        </div> -->
       </div>
     </header>
     <!-- END HEADER -->
@@ -145,7 +137,7 @@
 
           <div
             data-aos="slide-up"
-            data-aos-duration="1000"
+            data-aos-duration="2000"
             data-aos-anchor-placement="top-center"
             class="about-text"
           >
@@ -181,7 +173,7 @@
       <section class="features-section bg-skin-tertiary-light lg:pb-20">
         <div data-aos="fade" data-aos-duration="1500" class="feature-tagline">
           <div class="section-title">
-            <p class="text-5xl lg:text-6xl text-skin-primary pt-4 md:pt-20">
+            <p class="text-5xl lg:text-6xl text-skin-primary mt-12 md:mt-20">
               What We Do
             </p>
           </div>
@@ -235,7 +227,7 @@
             class="single-feature"
           >
             <h2 class="feature-title-mobile">Design</h2>
-            <div class="image flex justify-center xl:w-full xl:order-last">
+            <div class="image flex justify-center xl:order-last">
               <img src="./assets/feature2.png" alt="" class="feature-image" />
             </div>
             <div class="feature-text mt-6 xl:pr-10">
@@ -262,11 +254,10 @@
           <div
             data-aos="fade-right"
             data-aos-duration="1000"
-            data-aos-anchor-placement="top-center"
             class="single-feature"
           >
             <h2 class="feature-title-mobile">Develop</h2>
-            <div class="image flex justify-center xl:w-full">
+            <div class="image flex justify-center">
               <img src="./assets/feature3.png" alt="" class="feature-image" />
             </div>
             <div class="feature-text mt-6 xl:pl-10">
@@ -292,11 +283,10 @@
           <div
             data-aos="fade-left"
             data-aos-duration="1000"
-            data-aos-anchor-placement="top-center"
             class="single-feature"
           >
             <h2 class="feature-title-mobile">Deploy</h2>
-            <div class="image flex justify-center xl:w-full xl:order-last">
+            <div class="image flex justify-center xl:order-last">
               <img src="./assets/feature4.png" alt="" class="feature-image" />
             </div>
 
@@ -333,7 +323,7 @@
           data-aos-anchor-placement="center-bottom"
           class="triangle-1 max-w-sm"
         >
-          <img class="w-full md:w-3/4" src="./assets/triangle1.png" alt="" />
+          <img class="w-3/4" src="./assets/triangle1.png" alt="" />
         </div>
 
         <div
@@ -343,9 +333,10 @@
         >
           <div
             class="
-              pb-8
-              text-center text-3xl
-              md:text-5xl
+              pb-4
+              md:pb-8
+              text-center text-5xl
+              lg:text-6xl
               text-skin-tertiary
               font-normal
             "
@@ -432,7 +423,7 @@
           class="triangle-2 w-full flex justify-end"
         >
           <div class="triangle-2-container max-w-sm flex justify-end">
-            <img class="w-full md:w-3/4" src="./assets/triangle2.png" alt="" />
+            <img class="w-3/4" src="./assets/triangle2.png" alt="" />
           </div>
         </div>
       </section>
@@ -507,13 +498,6 @@
             el.classList.remove(elRemove);
           }
         };
-        // parallax helper function.
-        const parallax = (el, direction, yoffset, rate) => {
-          const posX = direction === "horizontal" ? yoffset * rate : 0;
-          const posY = direction === "vertical" ? yoffset * rate : 0;
-          el.style.transform =
-            "translate3d(" + posX + "px, " + posY + "px, 0px)";
-        };
 
         // smooth scroll function
         const smoothScroll = (classTo) => {
@@ -570,11 +554,11 @@
 
           /* pause/ play video here */
           if (bottomOfViewPort > 0.7 * featuresYoffsetStart) {
-            headerVideo.pause();
+            // headerVideo.pause();
           } else {
-            headerVideo.play();
+            // headerVideo.play();
             /* zoom header on scroll */
-            scaleRate = 1 + yOffset / 1000;
+            scaleRate = 1 + yOffset / 3000;
             header.style.transform = "scale(" + scaleRate + ")";
           }
 

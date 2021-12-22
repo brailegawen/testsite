@@ -831,6 +831,10 @@ select {
   margin-top: 1rem;
 }
 
+.mt-12 {
+  margin-top: 3rem;
+}
+
 .mt-6 {
   margin-top: 1.5rem;
 }
@@ -901,6 +905,10 @@ select {
 
 .w-screen {
   width: 100vw;
+}
+
+.w-3\/4 {
+  width: 75%;
 }
 
 .max-w-fit {
@@ -997,10 +1005,6 @@ select {
   padding-bottom: 1rem;
 }
 
-.pt-4 {
-  padding-top: 1rem;
-}
-
 .pb-8 {
   padding-bottom: 2rem;
 }
@@ -1066,7 +1070,7 @@ a:active,
 a:focus,
 a:active,
 a:hover {
-  text-decoration: none !important;
+  text-decoration: none;
 }
 
 body {
@@ -1253,6 +1257,11 @@ body {
   color: var(--color-secondary);
 }
 
+.burger-link:hover {
+  --tw-text-opacity: 1;
+  color: rgb(159 240 255 / var(--tw-text-opacity));
+}
+
 @media (min-width: 768px) {
   .burger-link {
     font-size: 3rem;
@@ -1418,11 +1427,6 @@ body {
   .about-us-description {
     width: 41.666667%;
   }
-
-  .about-us-description {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-  }
 }
 
 .about-us-image {
@@ -1465,7 +1469,7 @@ body {
 
 .feature-tagline-description {
   width: 100%;
-  max-width: 36rem;
+  max-width: 42rem;
   padding-left: 1rem;
   padding-right: 1rem;
   font-size: 1.25rem;
@@ -1672,6 +1676,7 @@ body {
 
 .contact-us-tagline {
   position: relative;
+  margin-top: 0px;
   display: flex;
   height: 100%;
   width: 100%;
@@ -1679,9 +1684,22 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
   text-align: center;
+}
+
+@media (min-width: 768px) {
+  .contact-us-tagline {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contact-us-tagline {
+    margin-top: -2.5rem;
+  }
 }
 
 .contact-us-tagline-description {
@@ -1702,8 +1720,14 @@ body {
   }
 }
 
-.contact-us-tagline-description > p:not(:last-child) {
-  margin-bottom: 2rem;
+.contact-us-tagline-description > p {
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .contact-us-tagline-description > p {
+    margin-bottom: 2rem;
+  }
 }
 
 .form-input {
@@ -1742,8 +1766,8 @@ body {
 }
 
 @media (min-width: 768px) {
-  .md\:w-3\/4 {
-    width: 75%;
+  .md\:mt-20 {
+    margin-top: 5rem;
   }
 
   .md\:p-4 {
@@ -1752,10 +1776,6 @@ body {
 
   .md\:pb-8 {
     padding-bottom: 2rem;
-  }
-
-  .md\:pt-20 {
-    padding-top: 5rem;
   }
 
   .md\:text-5xl {
@@ -1820,10 +1840,6 @@ body {
 @media (min-width: 1280px) {
   .xl\:order-last {
     order: 9999;
-  }
-
-  .xl\:w-full {
-    width: 100%;
   }
 
   .xl\:pl-10 {
