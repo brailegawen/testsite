@@ -1070,7 +1070,7 @@ a:active,
 a:focus,
 a:active,
 a:hover {
-  text-decoration: none;
+  /* text-decoration: none; */
 }
 
 body {
@@ -1231,12 +1231,13 @@ body {
   z-index: 30;
   width: 100%;
   opacity: 0;
-  transition: all 0.5s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 .burger-input-trigger:checked ~ .burger-menu {
   position: fixed;
   opacity: 1;
+  transition: all 1s ease-in-out;
 }
 
 .burger-list-menu {
@@ -1272,10 +1273,6 @@ body {
     font-size: 3rem;
     line-height: 1;
   }
-}
-
-.burger-link {
-  transition: all 1s;
 }
 
 /* header */
