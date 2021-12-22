@@ -1262,6 +1262,11 @@ body {
   color: rgb(159 240 255 / var(--tw-text-opacity));
 }
 
+.burger-link:active {
+  --tw-text-opacity: 1;
+  color: rgb(159 240 255 / var(--tw-text-opacity));
+}
+
 @media (min-width: 768px) {
   .burger-link {
     font-size: 3rem;
@@ -1270,7 +1275,7 @@ body {
 }
 
 .burger-link {
-  transition: all 0.4s;
+  transition: all 1s;
 }
 
 /* header */
