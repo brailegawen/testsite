@@ -37,7 +37,9 @@
                 What We Do</a
               >
             </li>
-            <li class="h-full flex items-center nav-link nav-link-3 link-class">
+            <li
+              class="h-full items-center nav-link nav-link-3 link-class hidden"
+            >
               <a data-section="contact-us-section" class="" href="#">
                 Get In Touch</a
               >
@@ -67,7 +69,7 @@
               What We Do</a
             >
           </li>
-          <li class="link-class p-2 md:p-4">
+          <li class="link-class p-2 md:p-4 hidden">
             <a data-section="contact-us-section" class="burger-link" href="#">
               Get In Touch</a
             >
@@ -317,7 +319,9 @@
       <!-- END features section -->
 
       <!-- contact us section -->
-      <section class="contact-us-section bg-skin-primary overflow-hidden">
+      <section
+        class="contact-us-section bg-skin-primary overflow-hidden hidden"
+      >
         <div
           data-aos="fade-up"
           data-aos-duration="2000"
@@ -579,12 +583,12 @@
             addRemoveClass(navbarItemThree, "", "showBottomBorder");
           }
 
-          if (yOffset > 0.9 * contactUsYoffsetStart) {
-            addRemoveClass(navbarItemThree, "showBottomBorder", "");
-            // remove
-            addRemoveClass(navbarItemOne, "", "showBottomBorder");
-            addRemoveClass(navbarItemTwo, "", "showBottomBorder");
-          }
+          // if (yOffset > 0.9 * contactUsYoffsetStart) {
+          //   addRemoveClass(navbarItemThree, "showBottomBorder", "");
+          //   // remove
+          //   addRemoveClass(navbarItemOne, "", "showBottomBorder");
+          //   addRemoveClass(navbarItemTwo, "", "showBottomBorder");
+          // }
 
           if (yOffset === navbarHeight) {
             addRemoveClass(navbarItemOne, "", "showBottomBorder");
