@@ -11,11 +11,11 @@
   <body>
     <!-- NAVBAR -->
     <nav class="navbar">
-      <ul class="flex justify-evenly items-center h-full lg:justify-between">
+      <ul class="flex justify-center items-center h-full">
         <li class="w-24 lg:w-32 lg:ml-6 relative homer-link cursor-pointer">
           <img src="./assets/morivy-log.png" alt="logo" />
         </li>
-        <li class="w-1/2 h-full hidden lg:flex">
+        <!-- <li class="w-1/2 h-full hidden lg:flex">
           <ul
             class="
               flex
@@ -27,12 +27,30 @@
               navtext
             "
           >
-            <li class="h-full flex items-center nav-link nav-link-1 link-class">
+            <li
+              class="
+                h-full
+                flex
+                items-center
+                nav-link nav-link-1
+                link-class
+                hidden
+              "
+            >
               <a data-section="about-us-section" class="" href="#"
                 >Who We Are</a
               >
             </li>
-            <li class="h-full flex items-center nav-link nav-link-2 link-class">
+            <li
+              class="
+                h-full
+                flex
+                items-center
+                nav-link nav-link-2
+                link-class
+                hidden
+              "
+            >
               <a data-section="features-section" class="" href="#">
                 What We Do</a
               >
@@ -45,7 +63,7 @@
               >
             </li>
           </ul>
-        </li>
+        </li> -->
       </ul>
     </nav>
 
@@ -53,7 +71,7 @@
 
     <div class="h-16 w-12 absolute top-6 right-4 lg:hidden overflow-hidden">
       <input class="burger-input-trigger" type="checkbox" id="navi-burger" />
-      <label class="burger-menu-line-container" for="navi-burger">
+      <label class="burger-menu-line-container hidden" for="navi-burger">
         <span class="burger-line relative mt-4 bg-skin-primary"></span>
       </label>
       <div class="burger-page-background">&nbsp</div>
@@ -173,12 +191,21 @@
       <!-- END about use section -->
 
       <!-- features section -->
-      <section class="features-section bg-skin-tertiary-light lg:pb-20">
+      <section class="features-section bg-skin-tertiary-light">
+        <div
+          data-aos="fade-up"
+          data-aos-duration="2000"
+          data-aos-anchor-placement="center-bottom"
+          class="triangle-1 w-full flex justify-end"
+        >
+          <div class="triangle-2-container max-w-sm flex justify-end">
+            <img class="w-3/4" src="./assets/triangle1.png" alt="" />
+          </div>
+        </div>
+
         <div data-aos="fade" data-aos-duration="1500" class="feature-tagline">
           <div class="section-title">
-            <p class="text-5xl lg:text-6xl text-skin-primary mt-24">
-              What We Do
-            </p>
+            <p class="text-5xl lg:text-6xl text-skin-primary">What We Do</p>
           </div>
           <div class="feature-tagline-description">
             Our mission is simple: to make great ideas a reality. Our team
@@ -313,6 +340,13 @@
               </p>
             </div>
           </div>
+        </div>
+        <div
+          data-aos="fade-up"
+          data-aos-duration="2000"
+          class="triangle-2 max-w-sm"
+        >
+          <img class="w-3/4" src="./assets/triangle2.png" alt="" />
         </div>
       </section>
 
@@ -567,21 +601,21 @@
 
           /* change navbar background using the .navbarDark class and underline on scroll */
           if (yOffset > 0.5 * aboutUsYoffsetStart) {
-            addRemoveClass(navbarList, "navtext-scrolled", "navtext");
+            // addRemoveClass(navbarList, "navtext-scrolled", "navtext");
             addRemoveClass(navbar, "navbarDark", "");
           }
-          if (yOffset > 0.75 * aboutUsYoffsetStart) {
-            addRemoveClass(navbarItemOne, "showBottomBorder", "");
-            // remove
-            addRemoveClass(navbarItemTwo, "", "showBottomBorder");
-            addRemoveClass(navbarItemThree, "", "showBottomBorder");
-          }
-          if (yOffset > 0.9 * featuresYoffsetStart) {
-            addRemoveClass(navbarItemTwo, "showBottomBorder", "");
-            // remove
-            addRemoveClass(navbarItemOne, "", "showBottomBorder");
-            addRemoveClass(navbarItemThree, "", "showBottomBorder");
-          }
+          // if (yOffset > 0.75 * aboutUsYoffsetStart) {
+          //   addRemoveClass(navbarItemOne, "showBottomBorder", "");
+          //   // remove
+          //   addRemoveClass(navbarItemTwo, "", "showBottomBorder");
+          //   addRemoveClass(navbarItemThree, "", "showBottomBorder");
+          // }
+          // if (yOffset > 0.9 * featuresYoffsetStart) {
+          //   addRemoveClass(navbarItemTwo, "showBottomBorder", "");
+          //   // remove
+          //   addRemoveClass(navbarItemOne, "", "showBottomBorder");
+          //   addRemoveClass(navbarItemThree, "", "showBottomBorder");
+          // }
 
           // if (yOffset > 0.9 * contactUsYoffsetStart) {
           //   addRemoveClass(navbarItemThree, "showBottomBorder", "");
@@ -591,9 +625,9 @@
           // }
 
           if (yOffset === navbarHeight) {
-            addRemoveClass(navbarItemOne, "", "showBottomBorder");
+            // addRemoveClass(navbarItemOne, "", "showBottomBorder");
             addRemoveClass(navbar, "", "navbarDark");
-            addRemoveClass(navbarList, "navtext", "navtext-scrolled");
+            // addRemoveClass(navbarList, "navtext", "navtext-scrolled");
           }
         });
       });
